@@ -46,7 +46,6 @@ where e.employeenumber = c.salesrepemployeenumber
 group by employeeName;
 /*How many payments have been made by each customer? 
 Show the customer name and the number of payments that customer has made.
-Hint: GROUP BY both the customer number and customer name, so that you can display the customer's name in the results.
 */
 select c.customernumber,c.customername,count(p.customernumber) from customers c, payments p 
 where p.customernumber = c.customernumber
@@ -63,8 +62,6 @@ sorted with highest total price at the top.*/
 select productcode, (quantityordered * priceeach) as totalPrice
 from orderdetails;
 /*Find all employees who report to Anthony Bow. List the employees’ full names.
-
-	Hint: join employees with itself.
 */
 select * from employees;
 Select concat(e1.firstname,' ',e1.lastname) as employeeName from employees e1
